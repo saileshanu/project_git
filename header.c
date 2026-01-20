@@ -1,1 +1,1 @@
-{\rtf1}
+sare game pada nisse{\rtf1}
