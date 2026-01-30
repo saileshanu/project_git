@@ -1,14 +1,5 @@
-CC      = gcc
-CFLAGS  = -Wall
-RM      = rm -f
+cmake_minimum_required(VERSION 2.4)
 
+project(hello_world)
 
-default: all
-
-all: Hello
-
-Hello: Hello.c
-	$(CC) $(CFLAGS) hello.c -o hello
-
-clean veryclean:
-	$(RM) Hello
+add_executable(app main.cpp)
