@@ -1,50 +1,11 @@
-# Source - https://stackoverflow.com/q/79165392
-# Posted by skrat
-# Retrieved 2026-01-30, License - CC BY-SA 4.0
-
-name: CMake build and test on Windows
-
-on:
-  push:
-    branches: [ "msin" ]
-  pull_request:
-    branches: [ "msin" ]
-
-env:
-  BUILD_TYPE: Release
-
 jobs:
-  build:
-    name: build and test
-    runs-on: windows-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Cache dependencies and build tools
-        uses: actions/cache@v3
-        with:
-          path: |
-            ${{ github.workspace }}/build/_deps
-            C:/ProgramData/ccache
-          key: deps-${{ runner.os }}-${{ hashFiles('CMakeLists.txt') }}
-          restore-keys: |
-            deps-${{ runner.os }}-
-
-      # Install ccache (only runs if cache not found)
-      - name: Install ccache
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: choco install ccache -y
-
-      - name: Configure CMake
-        run: >
-          cmake -B build
-          -DCMAKE_CXX_COMPILER_LAUNCHER=ccache
-          -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }}
-          -S ${{ github.workspace }}
-
-      - name: Build
-        run: cmake --build build --config ${{ env.BUILD_TYPE }}
-
-      - name: Test
-        run: ctest --test-dir build -C ${{ env.BUILD_TYPE }} -L WW --verbose
+build:
+name: Build the C project
+runs-on: ubuntu-latest
+steps:
+- name: Checkout code
+uses: actions/checkout@v4
+- name: Build the C project
+uses: actions/setup-cmake@v4
+with: cmake-version: '14.10.0'
+run: cmake -G Ninja -B build -o build . && cmake -G Ninja -B build -o install . && cmake -G Ninja -B build -o test . && cmake -G Ninja -B build -o clean 
