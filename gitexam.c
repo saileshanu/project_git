@@ -1,21 +1,14 @@
-hi
+#include <stdio.h>  // Required for printf()
 
-shrey
+int main(void) {
+    // Print the message to the console
+    if (printf("Hello, World!\n") < 0) {  
+        // Error handling in case printing fails
+        fprintf(stderr, "Error: Unable to print message.\n");
+        return 1; // Non-zero return indicates error
+    }
 
-5
-6
-=======
-
-7 
-8
-9
-10
-11
-12
-
-14
-15
-16
-
+    return 0; // Successful execution
+}
 
 
