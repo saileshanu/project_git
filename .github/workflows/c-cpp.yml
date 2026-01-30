@@ -19,8 +19,7 @@ jobs:
         run: cmake -S . -B build
 
       - name: Build
-        run: ctest --test-dir build
-        run: cmake --build build --config Release
+        run: cmake --build --config Release
 
       - name: Run tests
         run: ctest --test-dir build
