@@ -1,4 +1,5 @@
 #include <stdio.h>  // Required for printf()
+#include <conio.h>
 
 int main(void) {
     // Print the message to the console
@@ -8,7 +9,9 @@ int main(void) {
         return 1; // Non-zero return indicates error
     }
 
-    return 0; // Successful execution
+    
+	getch();
+	return 0; // Successful execution
 }
 
 
