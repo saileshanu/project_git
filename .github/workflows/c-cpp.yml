@@ -24,7 +24,7 @@ jobs:
           cmake ..
           cmake --build . --config Release
           mkdir -p ../bin
-          cp my_executable ../bin/
+          cp hello.exe ../bin/
       
 
       
@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v4
       
         env:
-          path: build/my_executable   # Change to your actual executable path
+          path: build/hello.exe   # Change to your actual executable path
       
       
 
