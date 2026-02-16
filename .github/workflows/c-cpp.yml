@@ -23,6 +23,8 @@ jobs:
           cd build
           cmake ..
           cmake --build . --config Release
+          mkdir -p ../bin
+          cp my_executable ../bin/
       
 
       - name: Upload executable
@@ -30,6 +32,7 @@ jobs:
         with:
           name: my-executable
           path: build/my_executable   # Change to your actual executable path
+          
       
       
 
