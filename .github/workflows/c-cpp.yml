@@ -32,8 +32,8 @@ jobs:
       # Upload executable as artifact
       - name: Upload executable
         uses: actions/upload-artifact@v4
-        with:
-          name: my-executable
+      
+        env:
           path: build/my_executable   # Change to your actual executable path
       
       
