@@ -24,7 +24,7 @@ jobs:
           cmake ..
           cmake --build . --config Release
           mkdir -p ../bin
-          cp Release ../bin/
+          cp app ../bin/
       
 
       
