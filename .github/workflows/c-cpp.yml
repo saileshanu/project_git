@@ -16,7 +16,24 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y build-essential cmake
 
       - name: Configure CMake
-        run: cmake -S . -B build
+       
+        
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          cmake --build . --config Release
+          mkdir -p ../bin
+          cp my_executable ../bin/
+
+      - name: Commit and push executable
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add bin/
+          git commit -m "Update executable after build [skip ci]" || echo "No changes to commit"
+          git push
+
 
       - name: Build
         run: cmake --build build
