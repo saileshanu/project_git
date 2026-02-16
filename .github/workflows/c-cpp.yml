@@ -25,8 +25,14 @@ jobs:
           cmake --build . --config Release
       - name: Upload executable
         uses: actions/upload-artifact@v4
+
+      - name: Upload executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-executable
+          path: build/my_executable   # Change to your actual executable path
       
-      - name: my-executable path: build/my_executable   # Change to your actual executable path
+      
 
       - name: Commit and push executable
         run: |
