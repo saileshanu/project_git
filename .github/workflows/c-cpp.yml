@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: my-executable
-          path: build/app   # Change to your actual executable path
+          path: build/app   # Change to your actual executable paths
       
       
 
