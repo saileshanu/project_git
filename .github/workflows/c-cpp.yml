@@ -29,12 +29,12 @@ jobs:
 
       
 
-      # Upload executable as artifact
+      
       - name: Upload executable
         uses: actions/upload-artifact@v4
-      
-        env:
-          path: build/hello.exe   # Change to your actual executable path
+        with:
+          name: my-executable
+          path: build/app   # Change to your actual executable path
       
       
 
