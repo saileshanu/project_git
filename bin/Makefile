@@ -117,31 +117,31 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named app
+# Target rules for targets named hello.exe
 
 # Build rule for target.
-app: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app
-.PHONY : app
+hello.exe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello.exe
+.PHONY : hello.exe
 
 # fast build rule for target.
-app/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
-.PHONY : app/fast
+hello.exe/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.exe.dir/build.make CMakeFiles/hello.exe.dir/build
+.PHONY : hello.exe/fast
 
 # target to build an object file
 Hello.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Hello.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.exe.dir/build.make CMakeFiles/hello.exe.dir/Hello.o
 .PHONY : Hello.o
 
 # target to preprocess a source file
 Hello.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Hello.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.exe.dir/build.make CMakeFiles/hello.exe.dir/Hello.i
 .PHONY : Hello.i
 
 # target to generate assembly for a file
 Hello.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/Hello.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.exe.dir/build.make CMakeFiles/hello.exe.dir/Hello.s
 .PHONY : Hello.s
 
 # Help Target
@@ -152,7 +152,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... app"
+	@echo "... hello.exe"
 	@echo "... Hello.o"
 	@echo "... Hello.i"
 	@echo "... Hello.s"

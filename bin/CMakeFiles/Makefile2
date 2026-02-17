@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /home/runner/work/project_git/project_git/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/app.dir/all
+all: CMakeFiles/hello.exe.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/app.dir/codegen
+codegen: CMakeFiles/hello.exe.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,40 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/app.dir/clean
+clean: CMakeFiles/hello.exe.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/app.dir
+# Target rules for target CMakeFiles/hello.exe.dir
 
 # All Build rule for target.
-CMakeFiles/app.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/project_git/project_git/build/CMakeFiles --progress-num=1,2 "Built target app"
-.PHONY : CMakeFiles/app.dir/all
+CMakeFiles/hello.exe.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.exe.dir/build.make CMakeFiles/hello.exe.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.exe.dir/build.make CMakeFiles/hello.exe.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/project_git/project_git/build/CMakeFiles --progress-num=1,2 "Built target hello.exe"
+.PHONY : CMakeFiles/hello.exe.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/app.dir/rule: cmake_check_build_system
+CMakeFiles/hello.exe.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/project_git/project_git/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/app.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/hello.exe.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/project_git/project_git/build/CMakeFiles 0
-.PHONY : CMakeFiles/app.dir/rule
+.PHONY : CMakeFiles/hello.exe.dir/rule
 
 # Convenience name for target.
-app: CMakeFiles/app.dir/rule
-.PHONY : app
+hello.exe: CMakeFiles/hello.exe.dir/rule
+.PHONY : hello.exe
 
 # codegen rule for target.
-CMakeFiles/app.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/project_git/project_git/build/CMakeFiles --progress-num=1,2 "Finished codegen for target app"
-.PHONY : CMakeFiles/app.dir/codegen
+CMakeFiles/hello.exe.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.exe.dir/build.make CMakeFiles/hello.exe.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/project_git/project_git/build/CMakeFiles --progress-num=1,2 "Finished codegen for target hello.exe"
+.PHONY : CMakeFiles/hello.exe.dir/codegen
 
 # clean rule for target.
-CMakeFiles/app.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/clean
-.PHONY : CMakeFiles/app.dir/clean
+CMakeFiles/hello.exe.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.exe.dir/build.make CMakeFiles/hello.exe.dir/clean
+.PHONY : CMakeFiles/hello.exe.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
