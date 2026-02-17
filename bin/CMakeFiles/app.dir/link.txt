@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic -Wl,--dependency-file=CMakeFiles/app.dir/link.d CMakeFiles/app.dir/Hello.o -o app
