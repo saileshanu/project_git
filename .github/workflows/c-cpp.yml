@@ -24,7 +24,7 @@ jobs:
           cmake ..
           cmake --build . --config Release
           mkdir -p ../bin
-          cp  -r ../bin/
+          cp * -r ../bin/
       
 
       
