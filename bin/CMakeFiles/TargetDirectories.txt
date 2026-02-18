@@ -1,3 +1,0 @@
-/home/runner/work/project_git/project_git/build/CMakeFiles/app.dir
-/home/runner/work/project_git/project_git/build/CMakeFiles/edit_cache.dir
-/home/runner/work/project_git/project_git/build/CMakeFiles/rebuild_cache.dir
