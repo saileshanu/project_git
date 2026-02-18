@@ -16,7 +16,38 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y build-essential cmake
 
       - name: Configure CMake
-        run: cmake -S . -B build
+       
+        
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          cmake --build . --config Release
+          #  mingw32-make
+          mkdir -p ../bin
+          cp  -r ../bin/
+      
+
+      
+
+      
+      - name: Upload executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-executable
+          path: build/   # Change to your actual executable paths
+      
+      
+
+      - name: Commit and push executable
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add bin/
+          git commit -m "Update executable after build [skip ci]" || echo "No changes to commit"
+          git push
+
 
       - name: Build
         run: cmake --build build
