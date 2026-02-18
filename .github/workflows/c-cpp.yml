@@ -23,6 +23,7 @@ jobs:
           cd build
           cmake ..
           cmake --build . --config Release
+          mingw32-make
           mkdir -p ../bin
           cp app -r ../bin/
       
