@@ -3,7 +3,7 @@
 
 int main(void) {
     // Print the message to the console
-    if (printf("Hello, World! my world printed   byr hello\n") < 0) {  
+    if (printf("Hello, World! my world printed   byr nvs hello\n") < 0) {  
         // Error handling in case printing fails
         fprintf(stderr, "Error: Unable to print message.\n");
         return 1; // Non-zero return indicates error
