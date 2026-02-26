@@ -25,7 +25,7 @@ jobs:
           cmake --build . --config Release
           #  mingw32-make
           mkdir -p ../bin
-          cp  -r ../bin/
+          cp   * -r ../bin/
       
 
       
