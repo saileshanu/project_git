@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic -Wl,--dependency-file=CMakeFiles/hello.exec.dir/link.d CMakeFiles/hello.exec.dir/Hello.o -o hello.exec
